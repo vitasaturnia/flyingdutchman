@@ -16,18 +16,17 @@ const Header = () => {
           <img src={logo} alt="Electronics Logo" style={{ maxHeight: '3.5rem', marginRight: '0.5rem' }} />
         </a>
 
-        <a
+        <button
           role="button"
           className={`navbar-burger ${isActive ? 'is-active' : ''}`}
           aria-label="menu"
           aria-expanded="false"
           onClick={toggleMenu}
-          href="#"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </button>
       </div>
 
       <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
