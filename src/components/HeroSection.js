@@ -25,9 +25,21 @@ const HeroSection = () => {
     <div className="hero-section">
       <div className="hero-content">
         <h1 className="hero-title">
-          <span className="gradient-text">The flying dutchman has arrived</span>
+          <span className="gradient-text animate-gradient">The flying dutchman has arrived!</span>
           <br />
-          <span className="hero-subtitle">Overpaying is history now.</span>
+          <div style={{ position: 'relative', display: 'inline-block' }}>
+            <span style={{ color: '#4a5568', fontWeight: '600', fontSize: '2rem', fontStyle: 'italic', display: 'block',WebkitTextFillColor: '#4a5568' }}>Say goodbye to overpriced electronics.</span>
+            <div style={{ 
+              content: '',
+              position: 'absolute',
+              bottom: '-2px',
+              left: '0',
+              width: '100%',
+              height: '1px',
+              background: 'linear-gradient(90deg, transparent, #00c6ff, transparent)',
+              opacity: '0.3'
+            }}></div>
+          </div>
         </h1>
         <p className="hero-description">
           Discover the latest electronics for the best prices. 

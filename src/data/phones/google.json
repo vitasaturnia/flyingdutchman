@@ -1,0 +1,359 @@
+{
+    "phones": {
+      "pixel_7": {
+        "name": "Google Pixel 7",
+        "colors": [
+          "Obsidian",
+          "Snow",
+          "Hazel"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 599,
+            "condition_prices": {
+              "New - Sealed": 599,
+              "Mint - Like New": 579,
+              "Excellent": 549,
+              "Good": 499,
+              "Fair": 399
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 699,
+            "condition_prices": {
+              "New - Sealed": 699,
+              "Mint - Like New": 669,
+              "Excellent": 639,
+              "Good": 589,
+              "Fair": 469
+            }
+          }
+        ]
+      },
+      "pixel_7_pro": {
+        "name": "Google Pixel 7 Pro",
+        "colors": [
+          "Obsidian",
+          "Snow",
+          "Hazel"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 899,
+            "condition_prices": {
+              "New - Sealed": 899,
+              "Mint - Like New": 859,
+              "Excellent": 819,
+              "Good": 749,
+              "Fair": 649
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          }
+        ]
+      },
+      "pixel_7_pro_xl": {
+        "name": "Google Pixel 7 Pro XL",
+        "colors": [
+          "Obsidian",
+          "Snow",
+          "Hazel"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          }
+        ]
+      },
+      "pixel_8": {
+        "name": "Google Pixel 8",
+        "colors": [
+          "Obsidian",
+          "Porcelain",
+          "Bay"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 699,
+            "condition_prices": {
+              "New - Sealed": 699,
+              "Mint - Like New": 669,
+              "Excellent": 639,
+              "Good": 589,
+              "Fair": 469
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 799,
+            "condition_prices": {
+              "New - Sealed": 799,
+              "Mint - Like New": 759,
+              "Excellent": 719,
+              "Good": 669,
+              "Fair": 539
+            }
+          }
+        ]
+      },
+      "pixel_8_pro": {
+        "name": "Google Pixel 8 Pro",
+        "colors": [
+          "Obsidian",
+          "Porcelain",
+          "Bay"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 1059,
+            "condition_prices": {
+              "New - Sealed": 1059,
+              "Mint - Like New": 1009,
+              "Excellent": 959,
+              "Good": 889,
+              "Fair": 759
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1179,
+            "condition_prices": {
+              "New - Sealed": 1179,
+              "Mint - Like New": 1129,
+              "Excellent": 1079,
+              "Good": 1009,
+              "Fair": 879
+            }
+          }
+        ]
+      },
+      "pixel_8_pro_xl": {
+        "name": "Google Pixel 8 Pro XL",
+        "colors": [
+          "Obsidian",
+          "Porcelain",
+          "Bay"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 1159,
+            "condition_prices": {
+              "New - Sealed": 1159,
+              "Mint - Like New": 1109,
+              "Excellent": 1059,
+              "Good": 989,
+              "Fair": 859
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1279,
+            "condition_prices": {
+              "New - Sealed": 1279,
+              "Mint - Like New": 1229,
+              "Excellent": 1179,
+              "Good": 1109,
+              "Fair": 959
+            }
+          }
+        ]
+      },
+      "pixel_9": {
+        "name": "Google Pixel 9",
+        "colors": [
+          "Obsidian",
+          "White",
+          "Sky"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 799,
+            "condition_prices": {
+              "New - Sealed": 799,
+              "Mint - Like New": 759,
+              "Excellent": 719,
+              "Good": 669,
+              "Fair": 539
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 899,
+            "condition_prices": {
+              "New - Sealed": 899,
+              "Mint - Like New": 859,
+              "Excellent": 819,
+              "Good": 769,
+              "Fair": 639
+            }
+          }
+        ]
+      },
+      "pixel_9_pro": {
+        "name": "Google Pixel 9 Pro",
+        "colors": [
+          "Obsidian",
+          "White",
+          "Sky"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          }
+        ]
+      },
+      "pixel_9_pro_xl": {
+        "name": "Google Pixel 9 Pro XL",
+        "colors": [
+          "Obsidian",
+          "White",
+          "Sky"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1299,
+            "condition_prices": {
+              "New - Sealed": 1299,
+              "Mint - Like New": 1249,
+              "Excellent": 1199,
+              "Good": 1129,
+              "Fair": 999
+            }
+          }
+        ]
+      }
+    }
+  }
+  

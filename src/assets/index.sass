@@ -1,0 +1,38 @@
+body
+  margin: 0
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+code
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+
+// Checkbox styles
+input[type="checkbox"]
+  appearance: none
+  -webkit-appearance: none
+  width: 18px
+  height: 18px
+  border: 2px solid #e0e0e0
+  border-radius: 4px
+  cursor: pointer
+  position: relative
+  transition: all 0.2s ease
+
+  &:checked
+    background-color: #00c6ff
+    border-color: #00c6ff
+
+    &::after
+      content: ''
+      position: absolute
+      left: 5px
+      top: 2px
+      width: 5px
+      height: 10px
+      border: solid white
+      border-width: 0 2px 2px 0
+      transform: rotate(45deg)
+
+  &:hover
+    border-color: #00c6ff

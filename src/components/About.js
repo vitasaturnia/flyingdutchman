@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../assets/about.sass';
+import me from '../assets/me.jpeg';
+import rocky from '../assets/rocky.jpg';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -11,14 +13,14 @@ const fadeInUp = {
 const About = () => {
   return (
     <div className="about-container">
-      <section className="hero-section mt-2">
+      <section className="hero-section">
         <motion.h1
           className="title gradient-text"
           initial="initial"
           animate="animate"
           variants={fadeInUp}
         >
-          Innovating the Future of Electronics
+          Bringing forth the future of electronics
         </motion.h1>
         <motion.p
           className="subtitle"
@@ -79,7 +81,7 @@ const About = () => {
           animate="animate"
           variants={fadeInUp}
         >
-          Meet The Flying Dutchman
+          Meet The Team
         </motion.h1>
         <div className="team-grid">
           <motion.div
@@ -90,9 +92,26 @@ const About = () => {
             transition={{ delay: 1 }}
             style={{ backgroundColor: '#2d3436', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            <div className="member-image placeholder" style={{ margin: '0 auto' }}>Dion</div>
+            <img src={me} alt="Dion Maarse" className="member-image" />
             <h4 className="member-name" style={{ color: 'white' }}>Dion Maarse</h4>
-            <p className="member-role" style={{ color: 'white' }}>Founder</p>
+            <p className="member-role" style={{ color: 'white' }}>"The Flying Dutchman"</p>
+          </motion.div>
+          <motion.div
+            className="team-member"
+            initial="initial"
+            animate="animate"
+            variants={fadeInUp}
+            transition={{ delay: 1.2 }}
+            style={{ backgroundColor: '#2d3436', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+          >
+            <img 
+              src={rocky} 
+              alt="Rocky" 
+              className="member-image" 
+              style={{ transform: 'scale(1.2)', objectFit: 'cover' }}
+            />
+            <h4 className="member-name" style={{ color: 'white' }}>Rocky</h4>
+            <p className="member-role" style={{ color: 'white' }}>"The Good Boy"</p>
           </motion.div>
         </div>
       </section>

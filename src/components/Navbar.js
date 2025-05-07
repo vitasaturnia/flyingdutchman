@@ -34,7 +34,7 @@ const Header = () => {
         <div className="navbar-start">
     
           <a className="navbar-item" href="/products">
-            Products
+            Shop
           </a>
           <a className="navbar-item" href="/sell">
             Sell your device
@@ -50,7 +50,23 @@ const Header = () => {
 
         <div className="navbar-end">
           <div className="navbar-item">
-            <div className="buttons">
+            <div className="buttons" style={{ gap: '0.5rem' }}>
+              <a 
+                className="navbar-item" 
+                href="/cart" 
+                style={{ 
+                  fontSize: '1.25rem',
+                  color: '#2c3e50',
+                  transition: 'all 0.3s ease',
+                  padding: '0.5em 0.75em',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.color = 'white'}
+                onMouseOut={(e) => e.currentTarget.style.color = '#2c3e50'}
+              >
+                <i className="fas fa-shopping-basket"></i>
+              </a>
               <a className="button is-light is-outlined" href="/login">
                 Log in
               </a>

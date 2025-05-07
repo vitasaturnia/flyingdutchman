@@ -1,0 +1,77 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 15 Pro Max",
+      "price": 1199.99,
+      "brand": "Apple",
+      "condition": "new",
+      "image": "iphone15promax.jpg",
+      "description": "Latest iPhone with A17 Pro chip, 48MP camera, and titanium design. 256GB storage.",
+      "category": "phones",
+      "storage": "256GB",
+      "color": "Natural Titanium"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 14 Pro",
+      "price": 899.99,
+      "brand": "Apple",
+      "condition": "used",
+      "image": "iphone14pro.jpg",
+      "description": "Excellent condition, 48MP camera, Dynamic Island. 256GB storage.",
+      "category": "phones",
+      "storage": "256GB",
+      "color": "Deep Purple"
+    },
+    {
+      "id": 3,
+      "name": "Galaxy S24 Ultra",
+      "price": 1199.99,
+      "brand": "Samsung",
+      "condition": "new",
+      "image": "s24ultra.jpg",
+      "description": "Latest Galaxy with S Pen, 200MP camera, and Snapdragon 8 Gen 3. 512GB storage.",
+      "category": "phones",
+      "storage": "512GB",
+      "color": "Titanium Black"
+    },
+    {
+      "id": 4,
+      "name": "Galaxy S23 Ultra",
+      "price": 899.99,
+      "brand": "Samsung",
+      "condition": "used",
+      "image": "s23ultra.jpg",
+      "description": "Like new condition, 200MP camera, S Pen included. 256GB storage.",
+      "category": "phones",
+      "storage": "256GB",
+      "color": "Phantom Black"
+    },
+    {
+      "id": 5,
+      "name": "Pixel 8 Pro",
+      "price": 999.99,
+      "brand": "Google",
+      "condition": "new",
+      "image": "pixel8pro.jpg",
+      "description": "Google's flagship with Tensor G3, 50MP camera, and 7 years of updates. 256GB storage.",
+      "category": "phones",
+      "storage": "256GB",
+      "color": "Obsidian"
+    },
+    {
+      "id": 6,
+      "name": "Pixel 7 Pro",
+      "price": 799.99,
+      "brand": "Google",
+      "condition": "used",
+      "image": "pixel7pro.jpg",
+      "description": "Excellent condition, 50MP camera, Tensor G2. 256GB storage.",
+      "category": "phones",
+      "storage": "256GB",
+      "color": "Snow"
+    }
+  ],
+  "featuredProducts": [1, 3, 5]
+} 

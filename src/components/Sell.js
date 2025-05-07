@@ -1,99 +1,62 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import '../assets/sell.sass';
+import appleData from '../data/phones/apple.json';
+import samsungData from '../data/phones/samsung.json';
+import googleData from '../data/phones/google.json';
 
+// Transform the JSON data to match the required structure
 const phoneData = {
-  Apple: {
-    'iPhone 16': { 
-      variants: ['iPhone 16', 'iPhone 16 Pro', 'iPhone 16 Pro Max'],
-      storage: ['128GB', '256GB', '512GB', '1TB'],
-      colors: ['Natural Titanium', 'Blue Titanium', 'White Titanium', 'Black Titanium']
-    },
-    'iPhone 15': { 
-      variants: ['iPhone 15', 'iPhone 15 Pro', 'iPhone 15 Pro Max'],
-      storage: ['128GB', '256GB', '512GB'],
-      colors: ['Black', 'Blue', 'Green', 'Pink', 'Yellow']
-    },
-    'iPhone 14': { 
-      variants: ['iPhone 14', 'iPhone 14 Pro', 'iPhone 14 Pro Max'],
-      storage: ['128GB', '256GB', '512GB'],
-      colors: ['Midnight', 'Purple', 'Starlight', 'Blue', 'Red']
-    },
-    'iPhone 13': { 
-      variants: ['iPhone 13', 'iPhone 13 Pro', 'iPhone 13 Pro Max'],
-      storage: ['128GB', '256GB', '512GB'],
-      colors: ['Midnight', 'Blue', 'Pink', 'Starlight', 'Red']
-    },
-    'iPhone 12': { 
-      variants: ['iPhone 12', 'iPhone 12 Pro', 'iPhone 12 Pro Max'],
-      storage: ['64GB', '128GB', '256GB'],
-      colors: ['Black', 'White', 'Blue', 'Green', 'Red']
-    },
-    'iPhone 11': { 
-      variants: ['iPhone 11', 'iPhone 11 Pro', 'iPhone 11 Pro Max'],
-      storage: ['64GB', '128GB', '256GB'],
-      colors: ['Black', 'Green', 'Purple', 'White', 'Yellow', 'Red']
+  Apple: Object.entries(appleData.phones).reduce((acc, [key, phone]) => {
+    // Extract base model name (e.g., "iPhone 14" from "iPhone 14 Pro")
+    const baseModel = phone.name.split(' ').slice(0, 2).join(' ');
+    
+    if (!acc[baseModel]) {
+      acc[baseModel] = {
+        variants: [],
+        storage: phone.storage.map(s => s.size),
+        colors: phone.colors
+      };
     }
-  },
-  Samsung: {
-    'Galaxy S25': { 
-      variants: ['Galaxy S25', 'Galaxy S25+', 'Galaxy S25 Ultra'],
-      storage: ['128GB', '256GB', '512GB', '1TB'],
-      colors: ['Titanium Black', 'Titanium Gray', 'Titanium Violet', 'Titanium Yellow']
-    },
-    'Galaxy S24': { 
-      variants: ['Galaxy S24', 'Galaxy S24+', 'Galaxy S24 Ultra'],
-      storage: ['128GB', '256GB', '512GB'],
-      colors: ['Onyx Black', 'Marble Gray', 'Cobalt Violet', 'Amber Yellow']
-    },
-    'Galaxy S23': { 
-      variants: ['Galaxy S23', 'Galaxy S23+', 'Galaxy S23 Ultra'],
-      storage: ['128GB', '256GB', '512GB'],
-      colors: ['Phantom Black', 'Cream', 'Green', 'Lavender']
-    },
-    'Galaxy S22': { 
-      variants: ['Galaxy S22', 'Galaxy S22+', 'Galaxy S22 Ultra'],
-      storage: ['128GB', '256GB'],
-      colors: ['Phantom Black', 'White', 'Pink Gold', 'Green']
-    },
-    'Galaxy S21': { 
-      variants: ['Galaxy S21', 'Galaxy S21+', 'Galaxy S21 Ultra'],
-      storage: ['128GB', '256GB'],
-      colors: ['Phantom Gray', 'Phantom White', 'Phantom Violet', 'Phantom Pink']
-    },
-    'Galaxy S20': { 
-      variants: ['Galaxy S20', 'Galaxy S20+', 'Galaxy S20 Ultra'],
-      storage: ['128GB', '256GB'],
-      colors: ['Cosmic Gray', 'Cloud Blue', 'Cloud Pink', 'Aura Red']
+    
+    // Add this variant to the base model's variants
+    acc[baseModel].variants.push(phone.name);
+    return acc;
+  }, {}),
+  
+  Samsung: Object.entries(samsungData.phones).reduce((acc, [key, phone]) => {
+    // Extract base model name (e.g., "Galaxy S24" from "Galaxy S24 Ultra")
+    const baseModel = phone.name.split(' ').slice(0, 3).join(' ');
+    
+    if (!acc[baseModel]) {
+      acc[baseModel] = {
+        variants: [],
+        storage: phone.storage.map(s => s.size),
+        colors: phone.colors
+      };
     }
-  },
-  Google: {
-    'Pixel 9': { 
-      variants: ['Pixel 9', 'Pixel 9 Pro', 'Pixel 9 Pro XL'],
-      storage: ['128GB', '256GB', '512GB'],
-      colors: ['Obsidian', 'Porcelain', 'Hazel', 'Rose']
-    },
-    'Pixel 8': { 
-      variants: ['Pixel 8', 'Pixel 8 Pro'],
-      storage: ['128GB', '256GB'],
-      colors: ['Obsidian', 'Hazel', 'Rose', 'Mint']
-    },
-    'Pixel 7': { 
-      variants: ['Pixel 7', 'Pixel 7 Pro'],
-      storage: ['128GB', '256GB'],
-      colors: ['Obsidian', 'Snow', 'Lemongrass']
-    },
-    'Pixel 6': { 
-      variants: ['Pixel 6', 'Pixel 6 Pro'],
-      storage: ['128GB', '256GB'],
-      colors: ['Stormy Black', 'Cloudy White', 'Sorta Seafoam']
-    },
-    'Pixel 5': { 
-      variants: ['Pixel 5'],
-      storage: ['128GB'],
-      colors: ['Just Black', 'Sorta Sage']
+    
+    // Add this variant to the base model's variants
+    acc[baseModel].variants.push(phone.name);
+    return acc;
+  }, {}),
+  
+  Google: Object.entries(googleData.phones).reduce((acc, [key, phone]) => {
+    // Extract base model name (e.g., "Google Pixel 7" from "Google Pixel 7 Pro")
+    const baseModel = phone.name.split(' ').slice(0, 3).join(' ');
+    
+    if (!acc[baseModel]) {
+      acc[baseModel] = {
+        variants: [],
+        storage: phone.storage.map(s => s.size),
+        colors: phone.colors
+      };
     }
-  }
+    
+    // Add this variant to the base model's variants
+    acc[baseModel].variants.push(phone.name);
+    return acc;
+  }, {})
 };
 
 const conditions = [
@@ -113,8 +76,11 @@ const Sell = () => {
     condition: '',
     storage: '',
     color: '',
-    isUnlocked: false
+    isUnlocked: false,
+    email: ''
   });
+  const [showPrice, setShowPrice] = useState(false);
+  const [showUnlockWarning, setShowUnlockWarning] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -122,6 +88,25 @@ const Sell = () => {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
+
+    // Auto advance for checkbox
+    if (type === 'checkbox' && checked) {
+      setShowUnlockWarning(false);
+    }
+  };
+
+  const handleSelection = (field, value) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    
+    // Only auto advance for specific selections
+    if (step < 5 && (
+      field === 'brand' || 
+      field === 'variant' || 
+      field === 'storage' || 
+      field === 'condition'
+    )) {
+      nextStep();
+    }
   };
 
   const nextStep = () => setStep(prev => prev + 1);
@@ -140,6 +125,39 @@ const Sell = () => {
     transition: { duration: 0.6 }
   };
 
+  const getPhonePrice = () => {
+    const brandData = {
+      'Apple': appleData,
+      'Samsung': samsungData,
+      'Google': googleData
+    }[formData.brand];
+
+    if (!brandData) return null;
+
+    const phoneKey = Object.keys(brandData.phones).find(key => 
+      brandData.phones[key].name === formData.variant
+    );
+
+    if (!phoneKey) return null;
+
+    const phone = brandData.phones[phoneKey];
+    const storageOption = phone.storage.find(s => s.size === formData.storage);
+    
+    if (!storageOption) return null;
+
+    const conditionLabel = conditions.find(c => c.value === formData.condition)?.label;
+    return storageOption.condition_prices[conditionLabel];
+  };
+
+  const handleProceed = () => {
+    if (formData.isUnlocked) {
+      setShowPrice(true);
+      setShowUnlockWarning(false);
+    } else {
+      setShowUnlockWarning(true);
+    }
+  };
+
   const renderStep = () => {
     switch (step) {
       case 1:
@@ -151,7 +169,7 @@ const Sell = () => {
                 <motion.button
                   key={brand}
                   className={`brand-card ${formData.brand === brand ? 'selected' : ''}`}
-                  onClick={() => setFormData(prev => ({ ...prev, brand, model: '', variant: '', storage: '', color: '' }))}
+                  onClick={() => handleSelection('brand', brand)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -183,7 +201,7 @@ const Sell = () => {
                         <motion.button
                           key={variant}
                           className={`variant-card ${formData.variant === variant ? 'selected' : ''}`}
-                          onClick={() => setFormData(prev => ({ ...prev, variant }))}
+                          onClick={() => handleSelection('variant', variant)}
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
@@ -203,21 +221,25 @@ const Sell = () => {
                   </motion.button>
                 </div>
               ) : (
-                Object.keys(phoneData[formData.brand] || {}).map(model => (
-                  <motion.div
-                    key={model}
-                    className="model-card-container"
-                    whileHover={{ scale: 1.01 }}
-                    whileTap={{ scale: 0.99 }}
-                  >
-                    <div 
-                      className={`model-card ${formData.model === model ? 'selected' : ''}`}
-                      onClick={() => setFormData(prev => ({ ...prev, model, variant: '', storage: '', color: '' }))}
-                    >
-                      {model}
-                    </div>
-                  </motion.div>
-                ))
+                Object.keys(phoneData[formData.brand] || {})
+                  .map(model => {
+                    const baseModel = phoneData[formData.brand][model].variants[0];
+                    return (
+                      <motion.div
+                        key={model}
+                        className="model-card-container"
+                        whileHover={{ scale: 1.01 }}
+                        whileTap={{ scale: 0.99 }}
+                      >
+                        <div 
+                          className={`model-card ${formData.model === model ? 'selected' : ''}`}
+                          onClick={() => setFormData(prev => ({ ...prev, model }))}
+                        >
+                          {baseModel}
+                        </div>
+                      </motion.div>
+                    );
+                  })
               )}
             </div>
           </motion.div>
@@ -232,7 +254,7 @@ const Sell = () => {
                 <motion.button
                   key={storage}
                   className={`storage-card ${formData.storage === storage ? 'selected' : ''}`}
-                  onClick={() => setFormData(prev => ({ ...prev, storage }))}
+                  onClick={() => handleSelection('storage', storage)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -252,7 +274,7 @@ const Sell = () => {
                 <motion.div
                   key={condition.value}
                   className={`condition-card ${formData.condition === condition.value ? 'selected' : ''}`}
-                  onClick={() => setFormData(prev => ({ ...prev, condition: condition.value }))}
+                  onClick={() => handleSelection('condition', condition.value)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -267,25 +289,18 @@ const Sell = () => {
       case 5:
         return (
           <motion.div className="form-step" {...fadeInUp}>
-            <h3>Phone Details</h3>
-            <div className="details-grid">
-              <div className="form-group">
-                <label>Color</label>
-                <select
-                  name="color"
-                  value={formData.color}
-                  onChange={handleChange}
-                  className="input-field"
-                >
-                  <option value="">Select a color</option>
-                  {phoneData[formData.brand]?.[formData.model]?.colors.map(color => (
-                    <option key={color} value={color}>
-                      {color}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="form-group checkbox-group">
+            <motion.div 
+              className="price-display"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <h3>Estimated Value</h3>
+              <div className="price-value">${getPhonePrice()}</div>
+              <p className="price-note">This is an estimated value based on your device's condition and specifications.</p>
+            </motion.div>
+
+            <div className="form-actions">
+              <div className="checkbox-group">
                 <label className="checkbox-label">
                   <input
                     type="checkbox"
@@ -296,26 +311,68 @@ const Sell = () => {
                   />
                   <span className="checkbox-text">Device is unlocked</span>
                 </label>
-                <p className="unlock-note">Note: We only accept unlocked devices for purchase or trade-in.</p>
               </div>
+              <motion.button
+                className={`proceed-button ${!formData.isUnlocked ? 'locked' : ''}`}
+                onClick={handleProceed}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {!formData.isUnlocked ? (
+                  <>
+                    <i className="fas fa-lock"></i>
+                    Proceed to Sell
+                  </>
+                ) : (
+                  'Proceed to Sell'
+                )}
+              </motion.button>
             </div>
 
-            <h3 className="section-title">Your Contact Information</h3>
-            <div className="contact-form">
-              <div className="form-group">
-                <label>Email Address</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email || ''}
-                  onChange={handleChange}
-                  placeholder="Enter your email"
-                  className="input-field"
-                  required
-                />
-                <p className="input-note">We'll use this to send you the quote and arrange purchase.</p>
-              </div>
-            </div>
+            {showUnlockWarning && (
+              <motion.div 
+                className="unlock-warning"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                <i className="fas fa-lock"></i>
+                <span>We only accept unlocked devices</span>
+              </motion.div>
+            )}
+
+            {formData.isUnlocked && (
+              <motion.div 
+                className="unlock-success"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                <i className="fas fa-check-circle"></i>
+                <span>Great! Your device is eligible for trade-in</span>
+              </motion.div>
+            )}
+
+            {showPrice && (
+              <motion.div 
+                className="contact-form"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                <h3 className="section-title">Your Contact Information</h3>
+                <div className="form-group">
+                  <label>Email Address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email || ''}
+                    onChange={handleChange}
+                    placeholder="Enter your email"
+                    className="input-field"
+                    required
+                  />
+                  <p className="input-note">We'll use this to send you the quote and arrange purchase.</p>
+                </div>
+              </motion.div>
+            )}
           </motion.div>
         );
 
@@ -338,12 +395,21 @@ const Sell = () => {
         </div>
 
         <div className="progress-bar">
-          {[1, 2, 3, 4, 5].map((stepNumber) => (
+          {[
+            { number: 1, label: 'Select Brand' },
+            { number: 2, label: 'Choose Model' },
+            { number: 3, label: 'Storage Size' },
+            { number: 4, label: 'Condition' },
+            { number: 5, label: 'Quote' }
+          ].map(({ number, label }) => (
             <div
-              key={stepNumber}
-              className={`progress-step ${stepNumber <= step ? 'active' : ''} ${stepNumber <= Object.keys(formData).findIndex(key => !formData[key]) ? 'clickable' : ''}`}
-              onClick={() => goToStep(stepNumber)}
-            />
+              key={number}
+              className={`progress-step ${number <= step ? 'active' : ''} ${number <= Object.keys(formData).findIndex(key => !formData[key]) ? 'clickable' : ''}`}
+              onClick={() => goToStep(number)}
+              data-tooltip={label}
+            >
+              {number}
+            </div>
           ))}
         </div>
 

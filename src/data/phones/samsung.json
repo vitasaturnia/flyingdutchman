@@ -1,0 +1,349 @@
+{
+    "phones": {
+      "galaxy_s23": {
+        "name": "Samsung Galaxy S23",
+        "colors": [
+          "Phantom Black",
+          "Green",
+          "Lavender",
+          "Cream"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 799,
+            "condition_prices": {
+              "New - Sealed": 799,
+              "Mint - Like New": 759,
+              "Excellent": 719,
+              "Good": 669,
+              "Fair": 539
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 859,
+            "condition_prices": {
+              "New - Sealed": 859,
+              "Mint - Like New": 819,
+              "Excellent": 779,
+              "Good": 729,
+              "Fair": 599
+            }
+          }
+        ]
+      },
+      "galaxy_s23_plus": {
+        "name": "Samsung Galaxy S23 Plus",
+        "colors": [
+          "Phantom Black",
+          "Green",
+          "Lavender",
+          "Cream"
+        ],
+        "storage": [
+          {
+            "size": "256GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          }
+        ]
+      },
+      "galaxy_s23_ultra": {
+        "name": "Samsung Galaxy S23 Ultra",
+        "colors": [
+          "Phantom Black",
+          "Cream",
+          "Green",
+          "Lavender"
+        ],
+        "storage": [
+          {
+            "size": "256GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1319,
+            "condition_prices": {
+              "New - Sealed": 1319,
+              "Mint - Like New": 1269,
+              "Excellent": 1219,
+              "Good": 1149,
+              "Fair": 1019
+            }
+          },
+          {
+            "size": "1TB",
+            "price": 1479,
+            "condition_prices": {
+              "New - Sealed": 1479,
+              "Mint - Like New": 1429,
+              "Excellent": 1379,
+              "Good": 1309,
+              "Fair": 1179
+            }
+          }
+        ]
+      },
+      "galaxy_s24": {
+        "name": "Samsung Galaxy S24",
+        "colors": [
+          "Titanium Black",
+          "Titanium Gray",
+          "Titanium Violet",
+          "Titanium Yellow"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 899,
+            "condition_prices": {
+              "New - Sealed": 899,
+              "Mint - Like New": 859,
+              "Excellent": 819,
+              "Good": 769,
+              "Fair": 639
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          }
+        ]
+      },
+      "galaxy_s24_plus": {
+        "name": "Samsung Galaxy S24 Plus",
+        "colors": [
+          "Titanium Black",
+          "Titanium Gray",
+          "Titanium Violet",
+          "Titanium Yellow"
+        ],
+        "storage": [
+          {
+            "size": "256GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          }
+        ]
+      },
+      "galaxy_s24_ultra": {
+        "name": "Samsung Galaxy S24 Ultra",
+        "colors": [
+          "Titanium Black",
+          "Titanium Gray",
+          "Titanium Violet",
+          "Titanium Yellow"
+        ],
+        "storage": [
+          {
+            "size": "256GB",
+            "price": 1299,
+            "condition_prices": {
+              "New - Sealed": 1299,
+              "Mint - Like New": 1249,
+              "Excellent": 1199,
+              "Good": 1129,
+              "Fair": 999
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1399,
+            "condition_prices": {
+              "New - Sealed": 1399,
+              "Mint - Like New": 1349,
+              "Excellent": 1299,
+              "Good": 1229,
+              "Fair": 1099
+            }
+          },
+          {
+            "size": "1TB",
+            "price": 1599,
+            "condition_prices": {
+              "New - Sealed": 1599,
+              "Mint - Like New": 1549,
+              "Excellent": 1499,
+              "Good": 1429,
+              "Fair": 1299
+            }
+          }
+        ]
+      },
+      "galaxy_s25": {
+        "name": "Samsung Galaxy S25",
+        "colors": [
+          "Silver Shadow",
+          "Navy",
+          "Mint",
+          "Iceblue"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 799,
+            "condition_prices": {
+              "New - Sealed": 799,
+              "Mint - Like New": 759,
+              "Excellent": 719,
+              "Good": 669,
+              "Fair": 539
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 859,
+            "condition_prices": {
+              "New - Sealed": 859,
+              "Mint - Like New": 819,
+              "Excellent": 779,
+              "Good": 729,
+              "Fair": 599
+            }
+          }
+        ]
+      },
+      "galaxy_s25_plus": {
+        "name": "Samsung Galaxy S25 Plus",
+        "colors": [
+          "Silver Shadow",
+          "Navy",
+          "Mint",
+          "Iceblue"
+        ],
+        "storage": [
+          {
+            "size": "256GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1119,
+            "condition_prices": {
+              "New - Sealed": 1119,
+              "Mint - Like New": 1069,
+              "Excellent": 1019,
+              "Good": 949,
+              "Fair": 819
+            }
+          }
+        ]
+      },
+      "galaxy_s25_ultra": {
+        "name": "Samsung Galaxy S25 Ultra",
+        "colors": [
+          "Titanium Whitesilver",
+          "Titanium Silverblue",
+          "Titanium Gray",
+          "Titanium Black",
+          "Titanium Jadegreen",
+          "Titanium Pinkgold",
+          "Titanium Jetblack"
+        ],
+        "storage": [
+          {
+            "size": "256GB",
+            "price": 1299,
+            "condition_prices": {
+              "New - Sealed": 1299,
+              "Mint - Like New": 1249,
+              "Excellent": 1199,
+              "Good": 1129,
+              "Fair": 999
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1419,
+            "condition_prices": {
+              "New - Sealed": 1419,
+              "Mint - Like New": 1369,
+              "Excellent": 1319,
+              "Good": 1249,
+              "Fair": 1119
+            }
+          },
+          {
+            "size": "1TB",
+            "price": 1659,
+            "condition_prices": {
+              "New - Sealed": 1659,
+              "Mint - Like New": 1609,
+              "Excellent": 1559,
+              "Good": 1489,
+              "Fair": 1359
+            }
+          }
+        ]
+      }
+    }
+  }
+  

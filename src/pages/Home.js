@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import HeroSection from '../components/HeroSection';
 import ProductGrid from '../components/ProductGrid';
+import productsData from '../data/products.json';
 
 const Home = () => {
-  const products = [
-    { id: 1, name: "Premium Headphones", price: 299.99 },
-    { id: 2, name: "Wireless Earbuds", price: 159.99 },
-    { id: 3, name: "Smart Watch", price: 399.99 },
-  ];
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+
+  useEffect(() => {
+    const featured = productsData.products.filter(product => 
+      productsData.featuredProducts.includes(product.id)
+    );
+    setFeaturedProducts(featured);
+  }, []);
 
   return (
     <div className="home-page">
@@ -15,7 +19,7 @@ const Home = () => {
         <HeroSection />
         
         <h2 className="gradient-text" style={{ textAlign: 'center', marginBottom: '2rem', marginTop: '-4rem' }}>Featured Products</h2>
-        <ProductGrid products={products} />
+        <ProductGrid products={featuredProducts} />
       </div>
     </div>
   );

@@ -1,0 +1,583 @@
+{
+    "phones": {
+      "iphone_14": {
+        "name": "iPhone 14",
+        "colors": [
+          "Purple",
+          "Blue",
+          "Midnight",
+          "Starlight",
+          "Red"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 799,
+            "condition_prices": {
+              "New - Sealed": 799,
+              "Mint - Like New": 759,
+              "Excellent": 719,
+              "Good": 669,
+              "Fair": 539
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 899,
+            "condition_prices": {
+              "New - Sealed": 899,
+              "Mint - Like New": 859,
+              "Excellent": 819,
+              "Good": 769,
+              "Fair": 639
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          }
+        ]
+      },
+      "iphone_14_plus": {
+        "name": "iPhone 14 Plus",
+        "colors": [
+          "Purple",
+          "Blue",
+          "Midnight",
+          "Starlight",
+          "Red"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 899,
+            "condition_prices": {
+              "New - Sealed": 899,
+              "Mint - Like New": 859,
+              "Excellent": 819,
+              "Good": 769,
+              "Fair": 639
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          }
+        ]
+      },
+      "iphone_14_pro": {
+        "name": "iPhone 14 Pro",
+        "colors": [
+          "Deep Purple",
+          "Gold",
+          "Silver",
+          "Space Black"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1299,
+            "condition_prices": {
+              "New - Sealed": 1299,
+              "Mint - Like New": 1249,
+              "Excellent": 1199,
+              "Good": 1129,
+              "Fair": 999
+            }
+          },
+          {
+            "size": "1TB",
+            "price": 1499,
+            "condition_prices": {
+              "New - Sealed": 1499,
+              "Mint - Like New": 1449,
+              "Excellent": 1399,
+              "Good": 1329,
+              "Fair": 1199
+            }
+          }
+        ]
+      },
+      "iphone_14_pro_max": {
+        "name": "iPhone 14 Pro Max",
+        "colors": [
+          "Deep Purple",
+          "Gold",
+          "Silver",
+          "Space Black"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1399,
+            "condition_prices": {
+              "New - Sealed": 1399,
+              "Mint - Like New": 1349,
+              "Excellent": 1299,
+              "Good": 1229,
+              "Fair": 1099
+            }
+          },
+          {
+            "size": "1TB",
+            "price": 1599,
+            "condition_prices": {
+              "New - Sealed": 1599,
+              "Mint - Like New": 1549,
+              "Excellent": 1499,
+              "Good": 1429,
+              "Fair": 1299
+            }
+          }
+        ]
+      },
+      "iphone_15": {
+        "name": "iPhone 15",
+        "colors": [
+          "Pink",
+          "Yellow",
+          "Green",
+          "Blue",
+          "Black"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 799,
+            "condition_prices": {
+              "New - Sealed": 799,
+              "Mint - Like New": 759,
+              "Excellent": 719,
+              "Good": 669,
+              "Fair": 539
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 899,
+            "condition_prices": {
+              "New - Sealed": 899,
+              "Mint - Like New": 859,
+              "Excellent": 819,
+              "Good": 769,
+              "Fair": 639
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          }
+        ]
+      },
+      "iphone_15_plus": {
+        "name": "iPhone 15 Plus",
+        "colors": [
+          "Pink",
+          "Yellow",
+          "Green",
+          "Blue",
+          "Black"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 899,
+            "condition_prices": {
+              "New - Sealed": 899,
+              "Mint - Like New": 859,
+              "Excellent": 819,
+              "Good": 769,
+              "Fair": 639
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          }
+        ]
+      },
+      "iphone_15_pro": {
+        "name": "iPhone 15 Pro",
+        "colors": [
+          "Natural Titanium",
+          "Blue Titanium",
+          "White Titanium",
+          "Black Titanium"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1299,
+            "condition_prices": {
+              "New - Sealed": 1299,
+              "Mint - Like New": 1249,
+              "Excellent": 1199,
+              "Good": 1129,
+              "Fair": 999
+            }
+          },
+          {
+            "size": "1TB",
+            "price": 1499,
+            "condition_prices": {
+              "New - Sealed": 1499,
+              "Mint - Like New": 1449,
+              "Excellent": 1399,
+              "Good": 1329,
+              "Fair": 1199
+            }
+          }
+        ]
+      },
+      "iphone_15_pro_max": {
+        "name": "iPhone 15 Pro Max",
+        "colors": [
+          "Natural Titanium",
+          "Blue Titanium",
+          "White Titanium",
+          "Black Titanium"
+        ],
+        "storage": [
+          {
+            "size": "256GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1399,
+            "condition_prices": {
+              "New - Sealed": 1399,
+              "Mint - Like New": 1349,
+              "Excellent": 1299,
+              "Good": 1229,
+              "Fair": 1099
+            }
+          },
+          {
+            "size": "1TB",
+            "price": 1599,
+            "condition_prices": {
+              "New - Sealed": 1599,
+              "Mint - Like New": 1549,
+              "Excellent": 1499,
+              "Good": 1429,
+              "Fair": 1299
+            }
+          }
+        ]
+      },
+      "iphone_16": {
+        "name": "iPhone 16",
+        "colors": [
+          "Black",
+          "White",
+          "Pink",
+          "Teal",
+          "Ultramarine"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 799,
+            "condition_prices": {
+              "New - Sealed": 799,
+              "Mint - Like New": 759,
+              "Excellent": 719,
+              "Good": 669,
+              "Fair": 539
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 859,
+            "condition_prices": {
+              "New - Sealed": 859,
+              "Mint - Like New": 819,
+              "Excellent": 779,
+              "Good": 729,
+              "Fair": 599
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 979,
+            "condition_prices": {
+              "New - Sealed": 979,
+              "Mint - Like New": 929,
+              "Excellent": 879,
+              "Good": 829,
+              "Fair": 699
+            }
+          }
+        ]
+      },
+      "iphone_16_plus": {
+        "name": "iPhone 16 Plus",
+        "colors": [
+          "Black",
+          "White",
+          "Pink",
+          "Teal",
+          "Ultramarine"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 899,
+            "condition_prices": {
+              "New - Sealed": 899,
+              "Mint - Like New": 859,
+              "Excellent": 819,
+              "Good": 769,
+              "Fair": 639
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1119,
+            "condition_prices": {
+              "New - Sealed": 1119,
+              "Mint - Like New": 1069,
+              "Excellent": 1019,
+              "Good": 949,
+              "Fair": 819
+            }
+          }
+        ]
+      },
+      "iphone_16_pro": {
+        "name": "iPhone 16 Pro",
+        "colors": [
+          "Desert Titanium",
+          "Natural Titanium",
+          "White Titanium",
+          "Black Titanium"
+        ],
+        "storage": [
+          {
+            "size": "128GB",
+            "price": 999,
+            "condition_prices": {
+              "New - Sealed": 999,
+              "Mint - Like New": 949,
+              "Excellent": 899,
+              "Good": 829,
+              "Fair": 699
+            }
+          },
+          {
+            "size": "256GB",
+            "price": 1099,
+            "condition_prices": {
+              "New - Sealed": 1099,
+              "Mint - Like New": 1049,
+              "Excellent": 999,
+              "Good": 929,
+              "Fair": 799
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1299,
+            "condition_prices": {
+              "New - Sealed": 1299,
+              "Mint - Like New": 1249,
+              "Excellent": 1199,
+              "Good": 1129,
+              "Fair": 999
+            }
+          },
+          {
+            "size": "1TB",
+            "price": 1499,
+            "condition_prices": {
+              "New - Sealed": 1499,
+              "Mint - Like New": 1449,
+              "Excellent": 1399,
+              "Good": 1329,
+              "Fair": 1199
+            }
+          }
+        ]
+      },
+      "iphone_16_pro_max": {
+        "name": "iPhone 16 Pro Max",
+        "colors": [
+          "Desert Titanium",
+          "Natural Titanium",
+          "White Titanium",
+          "Black Titanium"
+        ],
+        "storage": [
+          {
+            "size": "256GB",
+            "price": 1199,
+            "condition_prices": {
+              "New - Sealed": 1199,
+              "Mint - Like New": 1149,
+              "Excellent": 1099,
+              "Good": 1029,
+              "Fair": 899
+            }
+          },
+          {
+            "size": "512GB",
+            "price": 1399,
+            "condition_prices": {
+              "New - Sealed": 1399,
+              "Mint - Like New": 1349,
+              "Excellent": 1299,
+              "Good": 1229,
+              "Fair": 1099
+            }
+          },
+          {
+            "size": "1TB",
+            "price": 1599,
+            "condition_prices": {
+              "New - Sealed": 1599,
+              "Mint - Like New": 1549,
+              "Excellent": 1499,
+              "Good": 1429,
+              "Fair": 1299
+            }
+          }
+        ]
+      }
+    }
+  }
+  

@@ -1,21 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductGrid from '../components/ProductGrid';
+import FilterSidebar from '../components/FilterSidebar';
+import productsData from '../data/products.json';
 
 const Products = () => {
-  const products = [
-    { id: 1, name: "Premium Headphones", price: 299.99 },
-    { id: 2, name: "Wireless Earbuds", price: 159.99 },
-    { id: 3, name: "Smart Watch", price: 399.99 },
-    { id: 4, name: "Bluetooth Speaker", price: 129.99 },
-    { id: 5, name: "Gaming Mouse", price: 79.99 },
-    { id: 6, name: "Mechanical Keyboard", price: 149.99 },
-    { id: 7, name: "Webcam HD", price: 89.99 },
-    { id: 8, name: "USB-C Hub", price: 49.99 },
-  ];
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
+
+  useEffect(() => {
+    setAllProducts(productsData.products);
+    setFilteredProducts(productsData.products);
+  }, []);
+
+  const handleFilterChange = (filters) => {
+    let filtered = [...allProducts];
+    
+    if (filters.condition !== 'all') {
+      filtered = filtered.filter(product => 
+        product.condition.toLowerCase() === filters.condition
+      );
+    }
+    
+    if (filters.brand !== 'all') {
+      filtered = filtered.filter(product => 
+        product.brand.toLowerCase() === filters.brand
+      );
+    }
+    
+    setFilteredProducts(filtered);
+  };
 
   return (
     <div className="products-page">
-      <ProductGrid products={products} />
+      <div className="product-container">
+        <FilterSidebar onFilterChange={handleFilterChange} />
+        <ProductGrid products={filteredProducts} />
+      </div>
     </div>
   );
 };

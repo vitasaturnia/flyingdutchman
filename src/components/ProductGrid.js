@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/productgrid.sass';
 
 const ProductGrid = ({ products }) => {
   return (
