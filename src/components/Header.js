@@ -50,10 +50,10 @@ const Header = () => {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-light" href="/login">
+              <a className="button is-light is-outlined" href="/login">
                 Log in
               </a>
-              <a className="button is-info" href="/signup">
+              <a className="button is-light" href="/signup">
                 Sign up
               </a>
             </div>

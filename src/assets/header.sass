@@ -1,6 +1,6 @@
 // SASS Variables
-$primary-color: #3273dc
-$hover-color: white
+$primary-color: #2c3e50
+$hover-color: #3498db
 $transition-speed: 0.3s
 $navbar-height: 3.25rem
 $navbar-item-hover-background-color: transparent
@@ -51,9 +51,10 @@ $navbar-item-mobile-padding: 0.75rem 1rem
   font-weight: 500
   padding: $navbar-item-padding
   +transition(color)
+  color: white !important
   
   &:hover
-    color: white !important
+    color: #00c6ff !important
     background-color: $navbar-item-hover-background-color !important
 
   .logo-text
@@ -71,14 +72,15 @@ $navbar-item-mobile-padding: 0.75rem 1rem
     
     &.is-light
       &:hover
-        background-color: white
-        color: $primary-color
-
+        background-color: #00c6ff
+        color: white
+        border-color: #00c6ff
     
-    &.is-info
+    &.is-light.has-text-black
+      color: $primary-color
       &:hover
-        background-color: white
-        color: $primary-color
+        background-color: #00c6ff
+        color: white !important
 
 // Mobile Menu
 .navbar-burger
