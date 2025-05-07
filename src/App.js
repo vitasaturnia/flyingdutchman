@@ -12,6 +12,8 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import SellPage from './pages/Sell'
 import CartPage from './pages/Cart'
+import Checkout from './pages/Checkout'
+import Success from './pages/Success'
 
 const AnimatedPage = ({ children }) => {
   return (
@@ -64,6 +66,16 @@ function App() {
                 <Route path="/cart" element={
                   <AnimatedPage>
                     <CartPage />
+                  </AnimatedPage>
+                } />
+                <Route path="/checkout" element={
+                  <AnimatedPage>
+                    <Checkout />
+                  </AnimatedPage>
+                } />
+                <Route path="/success" element={
+                  <AnimatedPage>
+                    <Success />
                   </AnimatedPage>
                 } />
               </Routes>

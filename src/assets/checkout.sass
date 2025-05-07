@@ -1,0 +1,187 @@
+// Variables
+$primary-gradient: linear-gradient(45deg, #00c6ff, #0072ff)
+$secondary-gradient: linear-gradient(45deg, #0072ff, #00c6ff)
+$text-color: #2d3436
+$placeholder-color: #6c757d
+$border-color: #e9ecef
+$box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+$border-radius: 12px
+$transition-speed: 0.3s
+
+// Mixins
+=glass-effect
+  background: rgba(255, 255, 255, 0.95)
+  backdrop-filter: blur(10px)
+  border: 1px solid rgba(255, 255, 255, 0.2)
+
+=transition($property: all)
+  transition: $property $transition-speed ease
+
+// Checkout Container
+.checkout-container
+  max-width: 1200px
+  margin: 8rem auto 2rem
+  padding: 0 1rem
+  width: 100%
+
+// Checkout Wrapper
+.checkout-wrapper
+  +glass-effect
+  padding: 2rem
+  border-radius: $border-radius
+  box-shadow: $box-shadow
+  width: 100%
+
+// Checkout Header
+.checkout-header
+  text-align: center
+  margin-bottom: 2rem
+
+  h1
+    font-size: 2.5rem
+    color: $text-color
+    margin-bottom: 0.5rem
+    background: $primary-gradient
+    -webkit-background-clip: text
+    background-clip: text
+    -webkit-text-fill-color: transparent
+    font-weight: 700
+
+  p
+    color: $placeholder-color
+    line-height: 1.4
+
+// Checkout Content
+.checkout-content
+  display: grid
+  grid-template-columns: 2fr 1fr
+  gap: 2rem
+
+  @media (max-width: 768px)
+    grid-template-columns: 1fr
+
+// Order Summary
+.order-summary
+  background: white
+  padding: 1.5rem
+  border-radius: $border-radius
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05)
+
+  h2
+    font-size: 1.5rem
+    color: $text-color
+    margin-bottom: 1.5rem
+    font-weight: 600
+
+.order-items
+  margin-bottom: 2rem
+
+.order-item
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 1rem 0
+  border-bottom: 1px solid $border-color
+
+  &:last-child
+    border-bottom: none
+
+  .item-info
+    h3
+      font-size: 1.1rem
+      color: $text-color
+      margin-bottom: 0.25rem
+
+    p
+      color: $placeholder-color
+      font-size: 0.9rem
+
+  .item-price
+    font-size: 1.1rem
+    font-weight: 600
+    color: #0072ff
+
+.order-total
+  margin-top: 2rem
+  padding-top: 1rem
+  border-top: 2px solid $border-color
+
+  .total-row
+    display: flex
+    justify-content: space-between
+    margin-bottom: 0.75rem
+    color: $text-color
+    font-size: 1rem
+
+    &.grand-total
+      font-size: 1.2rem
+      font-weight: 600
+      color: $text-color
+      margin-top: 1rem
+      padding-top: 1rem
+      border-top: 1px solid $border-color
+
+// Payment Section
+.payment-section
+  background: white
+  padding: 1.5rem
+  border-radius: $border-radius
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05)
+  height: fit-content
+
+  .checkout-button
+    width: 100%
+    background: $primary-gradient
+    color: white
+    border: none
+    padding: 1rem
+    border-radius: 25px
+    font-size: 1rem
+    font-weight: 600
+    cursor: pointer
+    +transition
+    margin-bottom: 1rem
+
+    &:hover
+      background: $secondary-gradient
+      transform: translateY(-2px)
+      box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4)
+
+  .secure-payment
+    text-align: center
+    color: $placeholder-color
+    font-size: 0.9rem
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 0.5rem
+
+    i
+      color: #28a745
+
+// Responsive Styles
+@media screen and (max-width: 768px)
+  .checkout-container
+    margin-top: 6rem
+    padding: 0 0.5rem
+
+  .checkout-wrapper
+    padding: 1.5rem
+
+  .checkout-header
+    h1
+      font-size: 2rem
+
+  .order-summary
+    padding: 1rem
+
+    h2
+      font-size: 1.25rem
+
+  .order-item
+    .item-info
+      h3
+        font-size: 1rem
+
+    .item-price
+      font-size: 1rem 
