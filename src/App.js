@@ -3,6 +3,7 @@ import './assets/productgrid.sass'
 import './assets/header.sass'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { CartProvider } from './context/CartContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -28,48 +29,50 @@ const AnimatedPage = ({ children }) => {
 
 function App() {
   return (
-    <Router>
-      <div className="App" style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-        <Navbar />
-        <main style={{ flex: 1, width: '100%' }}>
-          <AnimatePresence mode="wait">
-            <Routes>
-              <Route path="/" element={
-                <AnimatedPage>
-                  <Home />
-                </AnimatedPage>
-              } />
-              <Route path="/shop" element={
-                <AnimatedPage>
-                  <Shop />
-                </AnimatedPage>
-              } />
-              <Route path="/about" element={
-                <AnimatedPage>
-                  <About />
-                </AnimatedPage>
-              } />
-              <Route path="/contact" element={
-                <AnimatedPage>
-                  <Contact />
-                </AnimatedPage>
-              } />
-              <Route path="/sell" element={
-                <AnimatedPage>
-                  <SellPage />
-                </AnimatedPage>
-              } />
-              <Route path="/cart" element={
-                <AnimatedPage>
-                  <CartPage />
-                </AnimatedPage>
-              } />
-            </Routes>
-          </AnimatePresence>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <CartProvider>
+      <Router>
+        <div className="App" style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+          <Navbar />
+          <main style={{ flex: 1, width: '100%' }}>
+            <AnimatePresence mode="wait">
+              <Routes>
+                <Route path="/" element={
+                  <AnimatedPage>
+                    <Home />
+                  </AnimatedPage>
+                } />
+                <Route path="/shop" element={
+                  <AnimatedPage>
+                    <Shop />
+                  </AnimatedPage>
+                } />
+                <Route path="/about" element={
+                  <AnimatedPage>
+                    <About />
+                  </AnimatedPage>
+                } />
+                <Route path="/contact" element={
+                  <AnimatedPage>
+                    <Contact />
+                  </AnimatedPage>
+                } />
+                <Route path="/sell" element={
+                  <AnimatedPage>
+                    <SellPage />
+                  </AnimatedPage>
+                } />
+                <Route path="/cart" element={
+                  <AnimatedPage>
+                    <CartPage />
+                  </AnimatedPage>
+                } />
+              </Routes>
+            </AnimatePresence>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 

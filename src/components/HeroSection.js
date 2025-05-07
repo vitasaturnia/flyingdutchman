@@ -80,8 +80,8 @@ const HeroSection = () => {
           className="hero-cta"
           variants={itemVariants}
         >
-          <Link to="/products" className="cta-button primary">
-            Explore Products
+          <Link to="/shop" className="cta-button primary">
+            Explore Shop
           </Link>
           <Link to="/contact" className="cta-button secondary">
             Contact Us

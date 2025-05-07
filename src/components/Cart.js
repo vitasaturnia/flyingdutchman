@@ -1,16 +1,24 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 import '../assets/cart.sass';
 
 const Cart = () => {
-  // This would normally come from a cart state management system
-  const cartItems = [];
+  const navigate = useNavigate();
+  const { items: cartItems, removeFromCart, updateQuantity, getCartTotal } = useCart();
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: -20 },
     transition: { duration: 0.5 }
+  };
+
+  const handleQuantityChange = (id, newQuantity) => {
+    if (newQuantity >= 1) {
+      updateQuantity(id, newQuantity);
+    }
   };
 
   return (
@@ -36,6 +44,7 @@ const Cart = () => {
                 className="continue-shopping"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => navigate('/shop')}
               >
                 Continue Shopping
               </motion.button>
@@ -66,9 +75,27 @@ const Cart = () => {
                         {item.storage} • {item.color} • {item.condition}
                       </p>
                       <div className="item-price">${item.price.toFixed(2)}</div>
+                      <div className="quantity-controls">
+                        <button 
+                          onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
+                          className="quantity-btn"
+                        >
+                          -
+                        </button>
+                        <span className="quantity">{item.quantity}</span>
+                        <button 
+                          onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
+                          className="quantity-btn"
+                        >
+                          +
+                        </button>
+                      </div>
                     </div>
                     <div className="item-actions">
-                      <button className="remove-item">
+                      <button 
+                        className="remove-item"
+                        onClick={() => removeFromCart(item.id)}
+                      >
                         <i className="fas fa-trash"></i>
                       </button>
                     </div>
@@ -79,7 +106,7 @@ const Cart = () => {
               <div className="cart-summary">
                 <div className="summary-row">
                   <span>Subtotal</span>
-                  <span>$0.00</span>
+                  <span>${getCartTotal().toFixed(2)}</span>
                 </div>
                 <div className="summary-row">
                   <span>Shipping</span>
@@ -87,12 +114,13 @@ const Cart = () => {
                 </div>
                 <div className="summary-row total">
                   <span>Total</span>
-                  <span>$0.00</span>
+                  <span>${getCartTotal().toFixed(2)}</span>
                 </div>
                 <motion.button 
                   className="checkout-button"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  onClick={() => navigate('/checkout')}
                 >
                   Proceed to Checkout
                 </motion.button>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 import '../assets/header.sass';
 import '../assets/cart-dropdown.sass';
 import logo from '../assets/logo.png';
@@ -8,7 +9,7 @@ const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+  const { items: cartItems, removeFromCart, getCartTotal } = useCart();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -109,7 +110,7 @@ const Header = () => {
                         <i className="fas fa-shopping-basket"></i>
                         <h3>Your cart is empty</h3>
                         <p>Looks like you haven't added any items to your cart yet.</p>
-                        <button className="continue-shopping">
+                        <button className="continue-shopping" onClick={() => navigate('/shop')}>
                           <i className="fas fa-arrow-left"></i>
                           <span>Continue Shopping</span>
                         </button>
@@ -125,8 +126,9 @@ const Header = () => {
                               <div className="item-details">
                                 <h4>{item.name}</h4>
                                 <div className="item-price">${item.price}</div>
+                                <div className="item-quantity">Qty: {item.quantity}</div>
                               </div>
-                              <button className="remove-item">
+                              <button className="remove-item" onClick={() => removeFromCart(item.id)}>
                                 <i className="fas fa-trash"></i>
                               </button>
                             </div>
@@ -136,7 +138,7 @@ const Header = () => {
                           <div className="cart-total">
                             <span className="total-label">Total:</span>
                             <span className="total-amount">
-                              ${cartItems.reduce((sum, item) => sum + item.price, 0).toFixed(2)}
+                              ${getCartTotal().toFixed(2)}
                             </span>
                           </div>
                           <Link to="/checkout" className="checkout-button">
