@@ -62,7 +62,7 @@ const Header = () => {
             <div className="buttons" style={{ gap: '0.5rem' }}>
               <Link className="navbar-item" to="/cart">
                 <i className="fas fa-shopping-basket"></i>
-                {isMobile && <span className="cart-text">Cart</span>}
+                {isMobile && <span className="cart-text"></span>}
               </Link>
               <Link className="button is-light is-outlined" to="/login">
                 Log in
