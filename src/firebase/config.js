@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC5o6yFSYM_jgyGoqRDP7N8pHd-EzoQ_cE",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "fdelectronics-4cbf3.firebaseapp.com",
   projectId: "fdelectronics-4cbf3",
   storageBucket: "fdelectronics-4cbf3.firebasestorage.app",
@@ -11,4 +11,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app); 
+export const db = getFirestore(app);
+
+export default firebaseConfig; 

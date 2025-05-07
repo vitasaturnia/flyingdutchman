@@ -7,7 +7,7 @@ import { db } from '../firebase/config';
 import '../assets/checkout.sass';
 
 // Replace with your publishable key
-const stripePromise = loadStripe('pk_test_51RMGVXQ4SR5JR7BXuFvUrWJIq47i2marB4hY7M34IAoq6VbQDCVZ59nJgucPVvpLepjrPtYZgyaFMK84GFh3QXYz00S3Y83DIu');
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const Checkout = () => {
   const { items, getCartTotal, clearCart } = useCart();
