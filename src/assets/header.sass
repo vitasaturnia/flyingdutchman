@@ -1,0 +1,113 @@
+// SASS Variables
+$primary-color: #3273dc
+$hover-color: white
+$transition-speed: 0.3s
+$navbar-height: 3.25rem
+$navbar-item-hover-background-color: transparent
+$navbar-item-padding: 0.5rem 0.75rem
+$navbar-item-mobile-padding: 0.75rem 1rem
+
+// Mixins
+=flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+=transition($property: all)
+  transition: $property $transition-speed ease
+
+=hover-transform
+  &:hover
+    transform: translateY(-1px)
+
+=mobile
+  @media screen and (max-width: 1023px)
+    @content
+
+// Navbar Base Styles
+.navbar
+  +transition
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1)
+  padding: 0.5rem 1rem
+  min-height: $navbar-height
+  
+  &.is-primary
+    background-color: $primary-color
+
+// Brand Section
+.navbar-brand
+  +flex-center
+  
+  .logo-text
+    font-size: 1.5rem
+    font-weight: 600
+    letter-spacing: 0.5px
+    &:hover
+      color: inherit
+  
+
+// Navigation Items
+.navbar-item
+  font-weight: 500
+  padding: $navbar-item-padding
+  +transition(color)
+  
+  &:hover
+    color: white !important
+    background-color: $navbar-item-hover-background-color !important
+
+  .logo-text
+    font-size: 1.5rem
+    font-weight: 600
+    letter-spacing: 0.5px
+    &:hover
+      color: inherit
+
+// Button Styles
+.buttons
+  .button
+    +transition
+    +hover-transform
+    
+    &.is-light
+      &:hover
+        background-color: white
+        color: $primary-color
+
+    
+    &.is-info
+      &:hover
+        background-color: white
+        color: $primary-color
+
+// Mobile Menu
+.navbar-burger
+  span
+    +transition
+  
+  &.is-active
+    span
+      &:nth-child(1)
+        transform: translateY(5px) rotate(45deg)
+      
+      &:nth-child(2)
+        opacity: 0
+      
+      &:nth-child(3)
+        transform: translateY(-5px) rotate(-45deg)
+
+// Mobile Styles
++mobile
+  .navbar-menu
+    box-shadow: none
+    padding: 0
+    
+    &.is-active
+      box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1)
+  
+  .navbar-item
+    padding: $navbar-item-mobile-padding
+  
+  .navbar-end
+    .navbar-item
+      justify-content: centerdarken

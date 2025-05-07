@@ -1,0 +1,192 @@
+// Variables
+$primary-gradient: linear-gradient(45deg, #00c6ff, #0072ff)
+$secondary-gradient: linear-gradient(45deg, #0072ff, #00c6ff)
+$text-color: #2d3436
+$light-text: #636e72
+$transition-speed: 0.3s
+$box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+$border-radius: 12px
+
+// Mixins
+=flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+=transition($property: all)
+  transition: $property $transition-speed ease
+
+=hover-transform
+  &:hover
+    transform: translateY(-2px)
+
+=glass-effect
+  background: rgba(255, 255, 255, 0.95)
+  backdrop-filter: blur(10px)
+  border: 1px solid rgba(255, 255, 255, 0.2)
+
+// Hero Section
+.hero-section
+  padding: 6rem 2rem 4rem
+  max-width: 1200px
+  margin: 0 auto
+  position: relative
+  z-index: 1
+  margin-top: -3.25rem
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: radial-gradient(circle at top right, rgba(0, 198, 255, 0.1), transparent 70%)
+    z-index: -1
+    width: 100vw
+    left: 50%
+    transform: translateX(-50%)
+
+// Hero Content
+.hero-content
+  text-align: center
+  margin-bottom: 4rem
+
+.hero-title
+  font-size: 3.5rem
+  line-height: 1.2
+  margin-bottom: 1.5rem
+
+  .gradient-text
+    font-size: 3.5rem
+    background: $primary-gradient
+    -webkit-background-clip: text
+    background-clip: text
+    -webkit-text-fill-color: transparent
+    font-weight: 700
+
+  .hero-subtitle
+    font-size: 2rem
+    color: $text-color
+    font-weight: 600
+
+.hero-description
+  font-size: 1.2rem
+  color: $light-text
+  max-width: 600px
+  margin: 0 auto 2rem
+  line-height: 1.6
+
+// CTA Buttons
+.hero-cta
+  display: flex
+  gap: 1rem
+  justify-content: center
+  margin-top: 2rem
+
+.cta-button
+  padding: 1rem 2rem
+  border-radius: 50px
+  font-weight: 600
+  font-size: 1.1rem
+  text-decoration: none
+  +transition
+  +hover-transform
+
+  &.primary
+    background: $primary-gradient
+    color: white
+    box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3)
+
+    &:hover
+      background: $secondary-gradient
+      box-shadow: 0 6px 20px rgba(0, 198, 255, 0.4)
+
+  &.secondary
+    background: white
+    color: $text-color
+    border: 2px solid #e9ecef
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05)
+
+    &:hover
+      border-color: #00c6ff
+      color: #00c6ff
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1)
+
+// Features Section
+.features-section
+  display: flex
+  justify-content: center
+  margin-top: 4rem
+
+  .features-container
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    gap: 1.5rem
+    max-width: 1200px
+    width: 100%
+
+.feature-card
+  +glass-effect
+  padding: 2rem
+  border-radius: $border-radius
+  text-align: center
+  +transition
+  +hover-transform
+
+  &:hover
+    box-shadow: $box-shadow
+
+.feature-icon
+  font-size: 2.5rem
+  color: #00c6ff
+  margin-bottom: 1rem
+  +transition
+
+  svg
+    filter: drop-shadow(0 4px 6px rgba(0, 198, 255, 0.2))
+
+.feature-title
+  font-size: 1.3rem
+  color: $text-color
+  margin-bottom: 0.75rem
+  font-weight: 600
+
+.feature-description
+  color: $light-text
+  font-size: 0.95rem
+  line-height: 1.5
+
+// Responsive Styles
+@media screen and (max-width: 1200px)
+  .features-section
+    grid-template-columns: repeat(2, 1fr)
+    gap: 1.5rem
+
+@media screen and (max-width: 768px)
+  .hero-section
+    padding: 4rem 1rem 2rem
+
+  .hero-title
+    font-size: 2.5rem
+
+    .gradient-text
+      font-size: 2.5rem
+
+    .hero-subtitle
+      font-size: 1.5rem
+
+  .hero-description
+    font-size: 1.1rem
+
+  .hero-cta
+    flex-direction: column
+    gap: 1rem
+
+  .cta-button
+    width: 100%
+    text-align: center
+
+  .features-section
+    grid-template-columns: 1fr
+    gap: 1.5rem 
