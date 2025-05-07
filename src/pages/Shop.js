@@ -3,7 +3,7 @@ import ProductGrid from '../components/ProductGrid';
 import FilterSidebar from '../components/FilterSidebar';
 import productsData from '../data/products.json';
 
-const Products = () => {
+const Shop = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
 
@@ -40,4 +40,4 @@ const Products = () => {
   );
 };
 
-export default Products; 
+export default Shop; 

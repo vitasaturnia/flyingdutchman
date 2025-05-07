@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../assets/header.sass';
 import logo from '../assets/logofd.png';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const toggleMenu = () => {
     setIsActive(!isActive);
@@ -30,8 +42,7 @@ const Header = () => {
 
       <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className="navbar-start">
-    
-          <a className="navbar-item" href="/products">
+          <a className="navbar-item" href="/shop">
             Shop
           </a>
           <a className="navbar-item" href="/sell">
@@ -40,7 +51,6 @@ const Header = () => {
           <a className="navbar-item" href="/about">
             About
           </a>
-         
           <a className="navbar-item" href="/contact">
             Contact
           </a>
@@ -49,21 +59,9 @@ const Header = () => {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons" style={{ gap: '0.5rem' }}>
-              <a 
-                className="navbar-item" 
-                href="/cart" 
-                style={{ 
-                  fontSize: '1.25rem',
-                  color: '#2c3e50',
-                  transition: 'all 0.3s ease',
-                  padding: '0.5em 0.75em',
-                  display: 'flex',
-                  alignItems: 'center'
-                }}
-                onMouseOver={(e) => e.currentTarget.style.color = 'white'}
-                onMouseOut={(e) => e.currentTarget.style.color = '#2c3e50'}
-              >
+              <a className="navbar-item" href="/cart">
                 <i className="fas fa-shopping-basket"></i>
+                {isMobile && <span className="cart-text">Cart</span>}
               </a>
               <a className="button is-light is-outlined" href="/login">
                 Log in

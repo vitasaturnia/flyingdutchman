@@ -68,6 +68,7 @@
 .product-container
   display: flex
   min-height: 100vh
+  position: relative
 
 .product-grid
   display: grid
@@ -80,11 +81,17 @@
   z-index: 1
   overflow-y: auto
   height: 100%
+  width: 100%
 
   // When inside product-container (with sidebar)
   .product-container &
     margin-left: 280px
     width: calc(100% - 280px)
+
+    @media (max-width: 768px)
+      margin-left: 0
+      width: 100%
+      padding: 10px
 
 .product-square
   background: rgba(255, 255, 255, 0.05)
@@ -99,6 +106,9 @@
   will-change: transform
   transform: translateZ(0)
 
+  @media (max-width: 768px)
+    padding: 12px
+
   &:hover
     transform: translateY(-5px)
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
@@ -110,11 +120,19 @@
   margin: 8px 0
   font-weight: 600
 
+  @media (max-width: 768px)
+    font-size: 1rem
+    margin: 6px 0
+
 .product-price
   color: #00c6ff
   font-size: 1.3rem
   font-weight: 700
   margin: 4px 0 12px
+
+  @media (max-width: 768px)
+    font-size: 1.1rem
+    margin: 4px 0 8px
 
 .placeholder-image
   width: 180px
@@ -126,6 +144,11 @@
   overflow: hidden
   will-change: transform
   transform: translateZ(0)
+
+  @media (max-width: 768px)
+    width: 140px
+    height: 140px
+    margin-bottom: 8px
 
 .add-to-cart
   background: linear-gradient(45deg, #00c6ff, #0072ff)
@@ -142,9 +165,35 @@
   will-change: transform
   transform: translateZ(0)
 
+  @media (max-width: 768px)
+    padding: 10px 20px
+    font-size: 0.9rem
+    max-width: 160px
+
   &:hover
     transform: scale(1.05)
     box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4)
+
+@media (max-width: 640px)
+  .product-grid
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    gap: 15px
+    padding: 10px
+
+  .placeholder-image
+    width: 120px
+    height: 120px
+
+  .product-name
+    font-size: 0.95rem
+
+  .product-price
+    font-size: 1rem
+
+  .add-to-cart
+    padding: 8px 16px
+    font-size: 0.85rem
+    max-width: 140px
 
 @media (max-width: 640px)
   .App-header h1

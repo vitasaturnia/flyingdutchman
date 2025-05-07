@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import Products from './pages/Products'
+import Shop from './pages/Shop'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import SellPage from './pages/Sell'
@@ -18,6 +18,7 @@ const AnimatedPage = ({ children }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
+      style={{ width: '100%', minHeight: '100vh' }}
     >
       {children}
     </motion.div>
@@ -27,9 +28,9 @@ const AnimatedPage = ({ children }) => {
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', width: '100%' }}>
         <Navbar />
-        <main className="">
+        <main style={{ flex: 1, width: '100%' }}>
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={
@@ -37,9 +38,9 @@ function App() {
                   <Home />
                 </AnimatedPage>
               } />
-              <Route path="/products" element={
+              <Route path="/shop" element={
                 <AnimatedPage>
-                  <Products />
+                  <Shop />
                 </AnimatedPage>
               } />
               <Route path="/about" element={

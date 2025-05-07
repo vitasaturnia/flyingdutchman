@@ -5,13 +5,13 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="columns">
-          <div className="column">
-            <h3 className="footer-title">FD Electronics</h3>
-            <p className="footer-description">
+        <div className="columns is-multiline">
+          <div className="column is-12-mobile is-4-desktop">
+            <h3 className="footer-title has-text-centered-mobile">FD Electronics</h3>
+            <p className="footer-description has-text-centered-mobile">
               Your one-stop shop for electronics at great prices.
             </p>
-            <div className="social-links has-text-centered" style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+            <div className="social-links has-text-centered" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '1rem' }}>
               <a href="tel:+15551234567" className="social-link">
                 <i className="fas fa-phone"></i>
               </a>
@@ -24,38 +24,37 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="column">
-            <h3 className="footer-title">Quick Links</h3>
-            <ul className="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/products">Products</a></li>
-              <li><a href="/sell">Sell Your Device</a></li>
-
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/contact">Contact</a></li>
+          <div className="column is-12-mobile is-4-desktop">
+            <h3 className="footer-title has-text-centered-mobile">Quick Links</h3>
+            <ul className="footer-links has-text-centered-mobile" style={{ listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '0.5rem' }}><a href="/">Home</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="/products">Products</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="/sell">Sell Your Device</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="/about">About Us</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="/contact">Contact</a></li>
             </ul>
           </div>
           
-          <div className="column">
-            <h3 className="footer-title has-text-centered">Contact Us</h3>
-            <ul className="footer-contact has-text-centered" style={{ listStyle: 'none', padding: 0 }}>
-              <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
-                <i className="fas fa-map-marker-alt"></i>
-                <span>6539 Fox Lane, Palos Heights, IL 60463</span>
+          <div className="column is-12-mobile is-4-desktop">
+            <h3 className="footer-title has-text-centered-mobile">Contact Us</h3>
+            <ul className="footer-contact has-text-centered-mobile" style={{ listStyle: 'none', padding: 0 }}>
+              <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.5rem', flexWrap: 'wrap', textAlign: 'left' }}>
+                <i className="fas fa-map-marker-alt" style={{ minWidth: '20px' }}></i>
+                <span style={{ flex: '1', minWidth: '200px' }}>6539 Fox Lane, Palos Heights, IL 60463</span>
               </li>
-              <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
-                <i className="fas fa-phone"></i>
-                <span>+1 (360) 603-2526</span>
+              <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.5rem', flexWrap: 'wrap', textAlign: 'left' }}>
+                <i className="fas fa-phone" style={{ minWidth: '20px' }}></i>
+                <span style={{ flex: '1', minWidth: '200px' }}>+1 (360) 603-2526</span>
               </li>
-              <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
-                <i className="fas fa-envelope"></i>
-                <span>support@fdelectronics.com</span>
+              <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.5rem', flexWrap: 'wrap', textAlign: 'left' }}>
+                <i className="fas fa-envelope" style={{ minWidth: '20px' }}></i>
+                <span style={{ flex: '1', minWidth: '200px' }}>support@fdelectronics.com</span>
               </li>
             </ul>
           </div>
         </div>
         
-        <div className="footer-bottom">
+        <div className="footer-bottom has-text-centered" style={{ marginTop: '2rem', paddingTop: '1rem', borderTop: '1px solid #dbdbdb' }}>
           <p>&copy; {new Date().getFullYear()} FD Electronics. All rights reserved.</p>
         </div>
       </div>

@@ -1,11 +1,120 @@
-body
+html, body, #root
   margin: 0
+  padding: 0
+  width: 100%
+  min-height: 100vh
+  overflow-x: hidden
+
+body
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-code
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+.App
+  text-align: center
+  display: flex
+  flex-direction: column
+  width: 100%
+  min-height: 100vh
+
+  &-logo
+    height: 40vmin
+    pointer-events: none
+
+  &-header
+    background: linear-gradient(135deg, #1a1c20, #2d3436)
+    min-height: auto
+    padding: 40px 20px 20px
+    margin-bottom: 20px
+    will-change: transform
+    width: 100%
+
+    h1
+      font-size: 2.5rem
+      margin-bottom: 0.5rem
+      background: linear-gradient(45deg, #00c6ff, #0072ff)
+      -webkit-background-clip: text
+      background-clip: text
+      -webkit-text-fill-color: transparent
+      font-weight: 700
+      pointer-events: none
+      user-select: none
+
+  &-link
+    color: #61dafb
+
+.subtitle
+  color: #a0a0a0
+  font-size: 1.2rem
+  margin-bottom: 2rem
+
+.gradient-text
+  font-size: 2.5rem
+  margin-bottom: 0.5rem
+  background: linear-gradient(45deg, #00c6ff, #0072ff)
+  -webkit-background-clip: text
+  background-clip: text
+  -webkit-text-fill-color: transparent
+  font-weight: 700
+
+.home-page, .products-page, .about-page, .contact-page
+  flex: 1
+  display: flex
+  flex-direction: column
+  margin-top: 6rem
+  padding-bottom: 2rem
+  width: 100%
+
+  .content-wrapper
+    flex: 1
+    display: flex
+    flex-direction: column
+    width: 100%
+
+    h1
+      font-size: 2.5rem
+      margin-bottom: 0.5rem
+      background: linear-gradient(45deg, #00c6ff, #0072ff)
+      -webkit-background-clip: text
+      background-clip: text
+      -webkit-text-fill-color: transparent
+      font-weight: 700
+
+.product-container
+  display: flex
+  min-height: 100vh
+  width: 100%
+
+.product-grid
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+  gap: 20px
+  max-width: 1200px
+  margin: 0 auto
+  padding: 20px
+  position: relative
+  z-index: 1
+  overflow-y: auto
+  height: 100%
+  width: 100%
+
+  // When inside product-container (with sidebar)
+  .product-container &
+    margin-left: 280px
+    width: calc(100% - 280px)
+
+@media (max-width: 768px)
+  .product-grid
+    margin-left: 0 !important
+    width: 100% !important
+    padding: 10px
+
+  .App-header h1
+    font-size: 2rem
+
+  .placeholder-image
+    width: 160px
+    height: 160px
 
 // Checkbox styles
 input[type="checkbox"]

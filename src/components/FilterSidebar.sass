@@ -9,6 +9,39 @@
   top: 80px
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2)
   z-index: 10
+  transition: transform 0.3s ease-in-out
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  @media (max-width: 768px)
+    transform: translateX(-100%)
+    width: 100%
+    max-width: 300px
+    height: calc(100vh - 60px)
+    top: 60px
+
+    &.is-active
+      transform: translateX(0)
+
+.filter-content
+  max-height: 80vh
+  overflow-y: auto
+  padding-right: 10px
+
+  &::-webkit-scrollbar
+    width: 6px
+
+  &::-webkit-scrollbar-track
+    background: rgba(255, 255, 255, 0.05)
+    border-radius: 3px
+
+  &::-webkit-scrollbar-thumb
+    background: rgba(255, 255, 255, 0.1)
+    border-radius: 3px
+
+    &:hover
+      background: rgba(255, 255, 255, 0.2)
 
 .filter-header
   margin-bottom: 20px
@@ -108,4 +141,62 @@
 
   input[type="radio"]:checked + .option-label
     color: #00c6ff
-    font-weight: 500 
+    font-weight: 500
+
+.filter-toggle
+  display: none
+  position: fixed
+  bottom: 20px
+  right: 20px
+  background: linear-gradient(45deg, #00c6ff, #0072ff)
+  color: white
+  border: none
+  padding: 12px 20px
+  border-radius: 25px
+  font-weight: 600
+  cursor: pointer
+  box-shadow: 0 4px 12px rgba(0, 198, 255, 0.3)
+  z-index: 100
+  transition: all 0.3s ease
+  display: flex
+  align-items: center
+  gap: 8px
+
+  &:hover
+    transform: translateY(-2px)
+    box-shadow: 0 6px 16px rgba(0, 198, 255, 0.4)
+
+  &.close
+    padding: 12px
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    justify-content: center
+    align-items: center
+    background: linear-gradient(45deg, #ff4757, #ff6b81)
+
+    i
+      font-size: 1.2rem
+
+  @media (max-width: 768px)
+    display: flex
+
+.filter-overlay
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(0, 0, 0, 0.5)
+  z-index: 9
+  opacity: 0
+  visibility: hidden
+  transition: all 0.3s ease
+
+  &.is-active
+    opacity: 1
+    visibility: visible
+
+  @media (max-width: 768px)
+    display: block 
