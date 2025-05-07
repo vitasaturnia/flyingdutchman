@@ -22,7 +22,6 @@ const Header = () => {
           aria-label="menu"
           aria-expanded="false"
           onClick={toggleMenu}
-          href="#"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
