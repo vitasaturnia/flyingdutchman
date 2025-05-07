@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaShieldAlt, FaMoneyBillWave, FaExchangeAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   const features = [
@@ -21,41 +22,104 @@ const HeroSection = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const featureVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <div className="hero-section">
+    <motion.div 
+      className="hero-section"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       <div className="hero-content">
-        <h1 className="hero-title">
+        <motion.h1 className="hero-title" variants={itemVariants}>
           <span className="gradient-text animate-gradient">The flying dutchman has arrived!</span>
-          <div className="subtitle-container">
+          <motion.div 
+            className="subtitle-container"
+            variants={itemVariants}
+          >
             <span className="subtitle-text">Say goodbye to overpriced electronics.</span>
             <div className="subtitle-underline"></div>
-          </div>
-        </h1>
+          </motion.div>
+        </motion.h1>
        
-        <div className="hero-cta">
+        <motion.div 
+          className="hero-cta"
+          variants={itemVariants}
+        >
           <Link to="/products" className="cta-button primary">
             Explore Products
           </Link>
           <Link to="/contact" className="cta-button secondary">
             Contact Us
           </Link>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="features-section">
+      <motion.div 
+        className="features-section"
+        variants={containerVariants}
+      >
         <div className="features-container">
           {features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <div className="feature-icon">
+            <motion.div 
+              key={index} 
+              className="feature-card"
+              variants={featureVariants}
+              whileHover={{ 
+                scale: 1.02,
+                transition: { duration: 0.2 }
+              }}
+            >
+              <motion.div 
+                className="feature-icon"
+                whileHover={{ 
+                  scale: 1.1,
+                  transition: { duration: 0.2 }
+                }}
+              >
                 {feature.icon}
-              </div>
+              </motion.div>
               <h3 className="feature-title">{feature.title}</h3>
               <p className="feature-description">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

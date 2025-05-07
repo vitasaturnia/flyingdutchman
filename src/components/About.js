@@ -107,8 +107,7 @@ const About = () => {
             <img 
               src={rocky} 
               alt="Rocky" 
-              className="member-image" 
-              style={{ transform: 'scale(1.2)', objectFit: 'cover' }}
+              className="member-image"
             />
             <h4 className="member-name" style={{ color: 'white' }}>Rocky</h4>
             <p className="member-role" style={{ color: 'white' }}>"The Good Boy"</p>
