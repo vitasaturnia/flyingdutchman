@@ -29,6 +29,8 @@ const Footer = () => {
             <ul className="footer-links">
               <li><a href="/">Home</a></li>
               <li><a href="/products">Products</a></li>
+              <li><a href="/sell">Sell Your Device</a></li>
+
               <li><a href="/about">About Us</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
@@ -39,15 +41,15 @@ const Footer = () => {
             <ul className="footer-contact has-text-centered" style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
                 <i className="fas fa-map-marker-alt"></i>
-                <span>123 Tech Street, Digital City</span>
+                <span>6539 Fox Lane, Palos Heights, IL 60463</span>
               </li>
               <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
                 <i className="fas fa-phone"></i>
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (360) 603-2526</span>
               </li>
               <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
                 <i className="fas fa-envelope"></i>
-                <span>info@electronics.com</span>
+                <span>support@fdelectronics.com</span>
               </li>
             </ul>
           </div>
