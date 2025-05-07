@@ -1,0 +1,246 @@
+// Variables
+$primary-gradient: linear-gradient(45deg, #00c6ff, #0072ff)
+$secondary-gradient: linear-gradient(45deg, #0072ff, #00c6ff)
+$input-bg: #f8f9fa
+$input-border: #e9ecef
+$text-color: #2d3436
+$placeholder-color: #6c757d
+$success-color: #28a745
+$error-color: #dc3545
+$transition-speed: 0.3s
+$box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+$border-radius: 12px
+$card-hover-shadow: 0 15px 35px rgba(0, 0, 0, 0.2)
+
+// Mixins
+=flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+=transition($property: all)
+  transition: $property $transition-speed ease
+
+=hover-transform
+  &:hover
+    transform: translateY(-2px)
+
+=glass-effect
+  background: rgba(255, 255, 255, 0.95)
+  backdrop-filter: blur(10px)
+  border: 1px solid rgba(255, 255, 255, 0.2)
+
+// Cart Container
+.cart-container
+  max-width: 1200px
+  margin: 8rem auto 2rem
+  padding: 0 1rem
+  width: 100%
+
+// Cart Wrapper
+.cart-wrapper
+  +glass-effect
+  padding: 2rem
+  border-radius: $border-radius
+  box-shadow: $box-shadow
+  width: 100%
+
+// Cart Header
+.cart-header
+  text-align: center
+  margin-bottom: 2rem
+
+  .cart-title
+    font-size: 2.5rem
+    color: $text-color
+    margin-bottom: 0.5rem
+    background: $primary-gradient
+    -webkit-background-clip: text
+    background-clip: text
+    -webkit-text-fill-color: transparent
+    font-weight: 700
+
+  .cart-subtitle
+    color: $placeholder-color
+    line-height: 1.4
+
+// Empty Cart
+.empty-cart
+  text-align: center
+  padding: 3rem 1rem
+  color: $placeholder-color
+
+  i
+    font-size: 4rem
+    color: $input-border
+    margin-bottom: 1rem
+
+  h2
+    font-size: 1.5rem
+    color: $text-color
+    margin-bottom: 0.5rem
+
+  p
+    margin-bottom: 2rem
+
+  .continue-shopping
+    background: $primary-gradient
+    color: white
+    border: none
+    padding: 0.75rem 1.5rem
+    border-radius: 25px
+    font-size: 1rem
+    font-weight: 600
+    cursor: pointer
+    +transition
+    display: inline-flex
+    align-items: center
+    gap: 0.5rem
+
+    &:hover
+      background: $secondary-gradient
+      box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4)
+
+// Cart Content
+.cart-content
+  display: grid
+  grid-template-columns: 2fr 1fr
+  gap: 2rem
+
+  @media (max-width: 768px)
+    grid-template-columns: 1fr
+
+// Cart Items
+.cart-items
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+.cart-item
+  display: grid
+  grid-template-columns: auto 1fr auto
+  gap: 1rem
+  padding: 1rem
+  background: white
+  border-radius: $border-radius
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05)
+  align-items: center
+  +transition
+
+  &:hover
+    box-shadow: $card-hover-shadow
+
+  .item-image
+    width: 100px
+    height: 100px
+    border-radius: 8px
+    overflow: hidden
+    background: $input-bg
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  .item-details
+    h3
+      font-size: 1.1rem
+      color: $text-color
+      margin-bottom: 0.5rem
+
+    .item-specs
+      color: $placeholder-color
+      font-size: 0.9rem
+      margin-bottom: 0.5rem
+
+    .item-price
+      font-size: 1.2rem
+      font-weight: 600
+      color: #0072ff
+
+  .item-actions
+    .remove-item
+      background: none
+      border: none
+      color: $placeholder-color
+      cursor: pointer
+      padding: 0.5rem
+      border-radius: 50%
+      +transition
+
+      &:hover
+        color: $error-color
+        background: rgba($error-color, 0.1)
+
+// Cart Summary
+.cart-summary
+  background: white
+  padding: 1.5rem
+  border-radius: $border-radius
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05)
+  height: fit-content
+
+  .summary-row
+    display: flex
+    justify-content: space-between
+    margin-bottom: 1rem
+    color: $text-color
+    font-size: 1rem
+
+    &.total
+      font-size: 1.2rem
+      font-weight: 600
+      color: $text-color
+      padding-top: 1rem
+      border-top: 1px solid $input-border
+      margin-top: 1rem
+
+  .checkout-button
+    width: 100%
+    background: $primary-gradient
+    color: white
+    border: none
+    padding: 1rem
+    border-radius: 25px
+    font-size: 1rem
+    font-weight: 600
+    cursor: pointer
+    +transition
+    margin-top: 1rem
+
+    &:hover
+      background: $secondary-gradient
+      box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4)
+
+// Responsive Styles
+@media screen and (max-width: 768px)
+  .cart-container
+    margin-top: 6rem
+    padding: 0 0.5rem
+
+  .cart-wrapper
+    padding: 1.5rem
+
+  .cart-title
+    font-size: 2rem
+
+  .cart-subtitle
+    font-size: 1rem
+
+  .cart-item
+    grid-template-columns: 80px 1fr auto
+    padding: 0.75rem
+
+  .item-image
+    width: 80px
+    height: 80px
+
+  .item-details
+    h3
+      font-size: 1rem
+
+    .item-specs
+      font-size: 0.85rem
+
+    .item-price
+      font-size: 1.1rem
