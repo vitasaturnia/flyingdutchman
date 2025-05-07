@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
@@ -6,12 +6,18 @@ import { collection, addDoc, serverTimestamp, updateDoc } from 'firebase/firesto
 import { db } from '../firebase/config';
 import '../assets/checkout.sass';
 
-// Replace with your publishable key
+// Check for required environment variable
+if (!process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY) {
+  console.error('Missing REACT_APP_STRIPE_PUBLISHABLE_KEY environment variable');
+}
+
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const Checkout = () => {
   const { items, getCartTotal, clearCart } = useCart();
   const navigate = useNavigate();
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (items.length === 0) {
@@ -20,9 +26,19 @@ const Checkout = () => {
   }, [items, navigate]);
 
   const handleCheckout = async () => {
+    if (isProcessing) return;
+    
+    setIsProcessing(true);
+    setError(null);
+
     try {
       console.log('Starting checkout process...');
       const stripe = await stripePromise;
+      
+      if (!stripe) {
+        throw new Error('Stripe failed to load. Please check your configuration.');
+      }
+      
       console.log('Stripe loaded:', !!stripe);
       
       // First, create an order document in Firestore
@@ -82,11 +98,17 @@ const Checkout = () => {
           status: 'failed',
           error: result.error.message,
         });
+        throw new Error(result.error.message);
       }
     } catch (error) {
       console.error('Checkout error:', error);
-      // You might want to show an error message to the user here
-      alert('There was an error processing your payment. Please try again.');
+      setError(error.message || 'There was an error processing your payment. Please try again.');
+      // Restore cart if needed
+      if (items.length === 0) {
+        // TODO: Implement restore cart functionality if needed
+      }
+    } finally {
+      setIsProcessing(false);
     }
   };
 
@@ -97,6 +119,12 @@ const Checkout = () => {
           <h1>Checkout</h1>
           <p>Review your order and proceed to payment</p>
         </div>
+
+        {error && (
+          <div className="error-message">
+            {error}
+          </div>
+        )}
 
         <div className="checkout-content">
           <div className="order-summary">
@@ -135,8 +163,9 @@ const Checkout = () => {
             <button 
               className="checkout-button"
               onClick={handleCheckout}
+              disabled={isProcessing}
             >
-              Proceed to Payment
+              {isProcessing ? 'Processing...' : 'Proceed to Payment'}
             </button>
             <p className="secure-payment">
               <i className="fas fa-lock"></i>

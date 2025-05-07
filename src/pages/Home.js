@@ -18,7 +18,11 @@ const Home = () => {
       <div className="content-wrapper">
         <HeroSection />
         
-        <h2 className="gradient-text" style={{ textAlign: 'center', marginBottom: '2rem', marginTop: '-4rem' }}>Featured Products</h2>
+        <h2 className="gradient-text" style={{ textAlign: 'center', marginBottom: '0.5rem' }}>Featured Products</h2>
+        <div className="subtitle-container" style={{ textAlign: 'center', marginBottom: '2rem', display: 'inline-block' }}>
+          <span className="subtitle-text">Explore some of our products</span>
+          <div className="subtitle-underline"></div>
+        </div>
         <ProductGrid products={featuredProducts} />
       </div>
     </div>
