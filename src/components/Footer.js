@@ -22,6 +22,12 @@ const Footer = () => {
               <a href="mailto:info@electronics.com" className="social-link">
                 <i className="fas fa-envelope"></i>
               </a>
+              <a href="https://facebook.com/fdelectronics" className="social-link">
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a href="https://instagram.com/fdelectronics" className="social-link">
+                <i className="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
           
@@ -41,15 +47,21 @@ const Footer = () => {
             <ul className="footer-contact has-text-centered-mobile" style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                 <i className="fas fa-map-marker-alt"></i>
-                <span>6539 Fox Lane, Palos Heights, IL 60463</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=6539+Fox+Lane+Palos+Heights+IL+60463" target="_blank" rel="noopener noreferrer">
+                  <span>6539 Fox Lane, Palos Heights, IL 60463</span>
+                </a>
               </li>
               <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                 <i className="fas fa-phone"></i>
-                <span>+1 (360) 603-2526</span>
+                <a href="tel:+13606032526">
+                  <span>+1 (360) 603-2526</span>
+                </a>
               </li>
               <li style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                 <i className="fas fa-envelope"></i>
-                <span>support@fdelectronics.com</span>
+                <a href="mailto:support@fdelectronics.com">
+                  <span>support@fdelectronics.com</span>
+                </a>
               </li>
             </ul>
           </div>
