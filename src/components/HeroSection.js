@@ -66,7 +66,7 @@ const HeroSection = () => {
     >
       <div className="hero-content">
         <motion.h1 className="hero-title" variants={itemVariants}>
-          <span className="gradient-text animate-gradient">The flying dutchman has arrived!</span>
+          <span className="gradient-text animate-gradient mt-5">The flying dutchman has arrived!</span>
           <motion.div 
             className="subtitle-container"
             variants={itemVariants}

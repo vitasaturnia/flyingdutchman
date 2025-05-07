@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { CartProvider } from './context/CartContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Newsletter from './components/Newsletter'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import About from './pages/About'
@@ -81,6 +82,7 @@ function App() {
               </Routes>
             </AnimatePresence>
           </main>
+          <Newsletter />
           <Footer />
         </div>
       </Router>

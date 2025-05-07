@@ -22,7 +22,8 @@
     "react-scripts": "5.0.1",
     "stripe": "^18.1.0",
     "styled-components": "^6.1.17",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "nodemailer": "^6.9.1"
   },
   "scripts": {
     "start": "react-scripts start",
