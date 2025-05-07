@@ -6,9 +6,10 @@ admin.initializeApp();
 
 exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
   // Enable CORS
-  res.set("Access-Control-Allow-Origin", "*");
-  res.set("Access-Control-Allow-Methods", "POST");
-  res.set("Access-Control-Allow-Headers", "Content-Type");
+  res.set("Access-Control-Allow-Origin", "https://fdelectronics.netlify.app");
+  res.set("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.set("Access-Control-Max-Age", "3600");
 
   if (req.method === "OPTIONS") {
     res.status(204).send("");
