@@ -165,6 +165,42 @@ const ContactForm = () => {
             )}
           </button>
         </form>
+
+        <div className="social-contact">
+          <h3 className="social-title">Or contact us directly</h3>
+          <div className="social-icons">
+            <a href="tel:+13606032526" className="social-item phone">
+              <div className="icon-wrapper">
+                <i className="fas fa-phone"></i>
+              </div>
+              <span className="social-label">Call Us</span>
+            </a>
+            <a href="mailto:support@fdelectronics.com" className="social-item email">
+              <div className="icon-wrapper">
+                <i className="fas fa-envelope"></i>
+              </div>
+              <span className="social-label">Email</span>
+            </a>
+            <a href="https://wa.me/13606032526" className="social-item whatsapp">
+              <div className="icon-wrapper">
+                <i className="fab fa-whatsapp"></i>
+              </div>
+              <span className="social-label">WhatsApp</span>
+            </a>
+            <a href="https://facebook.com/fdelectronics" className="social-item facebook">
+              <div className="icon-wrapper">
+                <i className="fab fa-facebook-f"></i>
+              </div>
+              <span className="social-label">Facebook</span>
+            </a>
+            <a href="https://instagram.com/fdelectronics" className="social-item instagram">
+              <div className="icon-wrapper">
+                <i className="fab fa-instagram"></i>
+              </div>
+              <span className="social-label">Instagram</span>
+            </a>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
