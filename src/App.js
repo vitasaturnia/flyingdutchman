@@ -28,7 +28,7 @@ const AnimatedPage = ({ children }) => {
 function App() {
   return (
     <Router>
-      <div className="App" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', width: '100%' }}>
+      <div className="App" style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
         <Navbar />
         <main style={{ flex: 1, width: '100%' }}>
           <AnimatePresence mode="wait">
