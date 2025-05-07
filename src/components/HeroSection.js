@@ -41,9 +41,7 @@ const HeroSection = () => {
             }}></div>
           </div>
         </h1>
-        <p className="hero-description">
-          Discover the latest electronics for the best prices. 
-        </p>
+       
         <div className="hero-cta">
           <Link to="/products" className="cta-button primary">
             Explore Products
