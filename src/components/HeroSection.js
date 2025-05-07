@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaShieldAlt, FaTruck, FaHeadset, FaAward, FaTag } from 'react-icons/fa';
+import { FaShieldAlt, FaMoneyBillWave, FaExchangeAlt } from 'react-icons/fa';
 
 const HeroSection = () => {
   const features = [
@@ -10,12 +10,12 @@ const HeroSection = () => {
       description: "We only sell great products, and if the product is used, it has been carefully tested and is in perfect condition."
     },
     {
-      icon: <FaTag />,
+      icon: <FaMoneyBillWave />,
       title: "Best Prices",
       description: "We take pride in our competitive pricing, with regular price checks and adjustments to ensure you always get the best deal possible."
     },
     {
-      icon: <FaAward />,
+      icon: <FaExchangeAlt />,
       title: "Expert Service",
       description: "Benefit from The Flying Dutchman's extensive experience in electronics and customer satisfaction."
     }

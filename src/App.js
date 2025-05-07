@@ -1,7 +1,7 @@
 import 'bulma/css/bulma.min.css'
 import './assets/productgrid.sass'
 import './assets/header.sass'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
