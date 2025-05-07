@@ -17,7 +17,6 @@ const Header = () => {
         </a>
 
         <button
-          role="button"
           className={`navbar-burger ${isActive ? 'is-active' : ''}`}
           aria-label="menu"
           aria-expanded="false"
