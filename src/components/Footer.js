@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/footer.sass';
 
 const Footer = () => {
@@ -27,11 +28,11 @@ const Footer = () => {
           <div className="column is-12-mobile is-4-desktop">
             <h3 className="footer-title has-text-centered-mobile">Quick Links</h3>
             <ul className="footer-links has-text-centered-mobile" style={{ listStyle: 'none', padding: 0 }}>
-              <li style={{ marginBottom: '0.5rem' }}><a href="/">Home</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="/products">Products</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="/sell">Sell Your Device</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="/about">About Us</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="/contact">Contact</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><Link to="/">Home</Link></li>
+              <li style={{ marginBottom: '0.5rem' }}><Link to="/shop">Shop</Link></li>
+              <li style={{ marginBottom: '0.5rem' }}><Link to="/sell">Sell Your Device</Link></li>
+              <li style={{ marginBottom: '0.5rem' }}><Link to="/about">About Us</Link></li>
+              <li style={{ marginBottom: '0.5rem' }}><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
           

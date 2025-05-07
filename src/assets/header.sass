@@ -59,7 +59,7 @@ $menu-item-bg: rgba(248, 249, 250, 0.98)
   
   &:hover
     color: #00c6ff !important
-    background-color: $navbar-item-hover-background-color !important
+    background-color: transparent !important
 
   .logo-text
     font-size: 1.5rem
@@ -67,6 +67,22 @@ $menu-item-bg: rgba(248, 249, 250, 0.98)
     letter-spacing: 0.5px
     &:hover
       color: inherit
+
+  &.is-primary
+    background-color: transparent !important
+    color: white !important
+    
+    &:hover
+      background-color: rgba(255, 255, 255, 0.1) !important
+      color: white !important
+
+a.navbar-item
+  background-color: transparent !important
+  color: white !important
+  
+  &:hover
+    background-color: transparent !important
+    color: #00c6ff !important
 
 // Button Styles
 .buttons

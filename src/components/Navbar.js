@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/header.sass';
 import logo from '../assets/logofd.png';
 
@@ -24,9 +25,9 @@ const Header = () => {
   return (
     <nav className="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="/">
+        <Link className="navbar-item" to="/">
           <img src={logo} alt="Electronics Logo" style={{ maxHeight: '3.5rem', marginRight: '0.5rem' }} />
-        </a>
+        </Link>
 
         <button
           className={`navbar-burger ${isActive ? 'is-active' : ''}`}
@@ -42,33 +43,33 @@ const Header = () => {
 
       <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className="navbar-start">
-          <a className="navbar-item" href="/shop">
+          <Link className="navbar-item" to="/shop">
             Shop
-          </a>
-          <a className="navbar-item" href="/sell">
+          </Link>
+          <Link className="navbar-item" to="/sell">
             Sell your device
-          </a>
-          <a className="navbar-item" href="/about">
+          </Link>
+          <Link className="navbar-item" to="/about">
             About
-          </a>
-          <a className="navbar-item" href="/contact">
+          </Link>
+          <Link className="navbar-item" to="/contact">
             Contact
-          </a>
+          </Link>
         </div>
 
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons" style={{ gap: '0.5rem' }}>
-              <a className="navbar-item" href="/cart">
+              <Link className="navbar-item" to="/cart">
                 <i className="fas fa-shopping-basket"></i>
                 {isMobile && <span className="cart-text">Cart</span>}
-              </a>
-              <a className="button is-light is-outlined" href="/login">
+              </Link>
+              <Link className="button is-light is-outlined" to="/login">
                 Log in
-              </a>
-              <a className="button is-light" href="/signup">
+              </Link>
+              <Link className="button is-light" to="/signup">
                 Sign up
-              </a>
+              </Link>
             </div>
           </div>
         </div>
