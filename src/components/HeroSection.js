@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaShieldAlt, FaMoneyBillWave, FaExchangeAlt } from 'react-icons/fa';
+import { FaShieldAlt, FaMoneyBillWave, FaExchangeAlt, FaRecycle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
@@ -19,6 +19,11 @@ const HeroSection = () => {
       icon: <FaExchangeAlt />,
       title: "Expert Service",
       description: "Benefit from The Flying Dutchman's extensive experience in electronics and customer satisfaction."
+    },
+    {
+      icon: <FaRecycle />,
+      title: "Trade-in Available",
+      description: "Upgrade easily by trading in your old device. Get instant value assessment and quick payment."
     }
   ];
 
